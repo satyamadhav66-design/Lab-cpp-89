@@ -5,9 +5,9 @@ int main() {
     std::cin >> number;
 
     if (number % 2 == 0) {
-        std::cout << "Even" << std::endl;
+        std::cout << "Even";
     } else {
-        std::cout << "Odd" << std::endl;
+        std::cout << "Odd";
     }
 
     return 0;

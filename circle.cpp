@@ -1,13 +1,20 @@
-#include<iostream>
+#include <iostream>
+#include <cmath>
 using namespace std;
-int main()
-{
-    float r,area,perimeter;
-    cout<<"Enter radius: ";
-    cin>>r;
-    area=3.14*r*r;
-    perimeter=2*3.14*r;
-    cout<<"Area = "<<area<<endl;
-    cout<<"Perimeter = "<<perimeter;
+
+int main() {
+    double radius, area, circumference;
+    const double PI = 3.141592653589793;
+
+    cout << "Enter the radius of the circle: ";
+    cin >> radius;
+
+    area = PI * pow(radius, 2);
+    circumference = 2 * PI * radius;
+
+    cout << "\n--- Results ---" << endl;
+    cout << "Area of the circle: " << area << endl;
+    cout << "Circumference of the circle: " << circumference << endl;
+
     return 0;
 }
