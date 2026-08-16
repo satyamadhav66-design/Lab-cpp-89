@@ -7,14 +7,13 @@ namespace SYCS4
         std::cout<<"Enter two numbers:";
         std::cin>>a>>b;
         std::cout<<"sum of two numbers is:"<<(a+b);
-        return 0;
     }
-int sub()
+      int sub()
     {
         int a,b,sub;
         std::cout<<"Enter two numbers:";
         std::cin>>a>>b;
-        std::cout<<"Differnce of two numbers is:"<<(a-b);
-        return 0;
-    }
+        std::cout<<"Difference of two numbers is:"<<(a-b);
+    }  
+    return 0;
 }
