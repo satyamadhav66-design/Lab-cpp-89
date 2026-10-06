@@ -5,7 +5,9 @@ const double PI = 3.14159;
 class Shape {
 public:
     virtual double calculateArea() const = 0;
-    virtual double calculatePerimeter() const = 0;
+    virtual double calculatePerimeter() {
+        return 2*(PI);
+    }
 };
 class Circle : public Shape {
 private:
@@ -15,25 +17,23 @@ public:
     double calculateArea() const override {
         return PI * pow(radius, 2);
     }
-    double calculatePerimeter() const override {
+    /*double calculatePerimeter() const override {
         return 2 * PI * radius;
-    }
+    }*/ 
 };
 class Rectangle : public Shape {
 private:
     double length;
     double width;
 public:
-    Rectangle(double len, double wid): length(len), width(wid) {}
-
+    Rectangle(double len, double wid): length(len), width(wid) {} 
     double calculateArea() const override {
         return length * width;
     }
-    double calculatePerimeter() const override {
+    double calculatePerimeter() {
         return 2 * (length + width);
     }
 };
-
 class Triangle : public Shape {
 private:
     double side1;
@@ -46,15 +46,15 @@ public:
         double s = (side1 + side2 + side3) / 2;
         return sqrt(s * (s - side1) * (s - side2) * (s - side3));
     }
-    double calculatePerimeter() const override {
+    double calculatePerimeter() {
         return side1 + side2 + side3;
     }
 };
 int main() {
     Circle circle(7.0);
+    //Shape s();
     Rectangle rectangle(4.2, 8.0);
     Triangle triangle(4.0, 4.0, 3.2);
-
     cout << "Circle: " << endl;
     cout << "Area: " << circle.calculateArea() << endl;
     cout << "Perimeter: " << circle.calculatePerimeter() << endl;
